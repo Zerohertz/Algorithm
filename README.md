@@ -1,2 +1,2 @@
 # Algorithm
-Solved problems in Baekjoon, Programmers
+Solved problems in BOJ, Programmers, CodeUp
