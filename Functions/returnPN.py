@@ -1,11 +1,16 @@
-def returnPN(M, N):
-  l = []
-  for i in range(M, N + 1):
-    if i == 1:
-      continue
-    for j in range(2, int(i ** 0.5) + 1):
-      if i % j == 0:
-        break
-    else:
-      l.append(i)
-  return l
+from cmath import exp, pi
+
+def fft(sig, inv):
+  N = len(sig)
+  if N == 1:
+    return sig
+  if inv == 0:
+    sig_even = fft(sig[0::2], 0)
+    sig_odd = fft(sig[1::2], 0)
+    W = [exp(2j*pi*i/N) for i in range(N//2)]
+    return [sig_even[i] + W[i] * sig_odd[i] for i in range(N//2)] + [sig_even[i] - W[i] * sig_odd[i] for i in range(N//2)]
+  elif inv == 1:
+    sig_even = fft(sig[0::2], 1)
+    sig_odd = fft(sig[1::2], 1)
+    W = [exp(-2j*pi*i/N) for i in range(N//2)]
+    return [sig_even[i] + W[i] * sig_odd[i] for i in range(N//2)] + [sig_even[i] - W[i] * sig_odd[i] for i in range(N//2)]
