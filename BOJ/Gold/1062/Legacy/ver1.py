@@ -17,7 +17,7 @@ for i in range(N):
   wordset.append(tmpwordset)
 
 res = 0
-if K >= 5:
+if K > 5:
   for i in combinations(s, K - 5):
     tmp = 0
     tmpi = tupleantic + i
