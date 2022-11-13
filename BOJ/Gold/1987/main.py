@@ -16,8 +16,7 @@ def DFS(x, y, cnt):
     nx, ny = x + v1[i], y + v2[i]
     if 0 <= nx < R and 0 <= ny < C and alphabet[ord(l[nx][ny]) - 65] == 0:
       alphabet[ord(l[nx][ny]) - 65] = 1
-      ncnt = cnt + 1
-      DFS(nx, ny, ncnt)
+      DFS(nx, ny, cnt + 1)
       alphabet[ord(l[nx][ny]) - 65] = 0
 
 alphabet[ord(l[0][0]) - 65] = 1
