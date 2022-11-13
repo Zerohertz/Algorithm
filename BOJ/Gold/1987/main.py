@@ -2,27 +2,24 @@ import sys
 read = sys.stdin.readline
 
 R, C = map(int, read().split())
-l = [['' for _ in range(C)] for _ in range(R)]
-for i in range(R):
-  l[i] = list(read().rstrip())
+l = [list(read().rstrip()) for _ in range(R)]
 
 v1 = [1, 0, -1, 0]
 v2 = [0, 1, 0, -1]
-alphabet = [False for _ in range(26)]
+alphabet = [0 for _ in range(26)]
 res = 0
 
-def DFS(pos, cnt):
+def DFS(x, y, cnt):
   global res
   res = max(cnt, res)
-  x, y = pos
-  for a, b in zip(v1, v2):
-    nx, ny = x + a, y + b
-    if 0 <= nx < R and 0 <= ny < C:
-      if not alphabet[ord(l[nx][ny]) - ord('A')]:
-        alphabet[ord(l[nx][ny]) - ord('A')] = True
-        DFS((nx, ny), cnt + 1)
-        alphabet[ord(l[nx][ny]) - ord('A')] = False
+  for i in range(4):
+    nx, ny = x + v1[i], y + v2[i]
+    if 0 <= nx < R and 0 <= ny < C and alphabet[ord(l[nx][ny]) - 65] == 0:
+      alphabet[ord(l[nx][ny]) - 65] = 1
+      ncnt = cnt + 1
+      DFS(nx, ny, ncnt)
+      alphabet[ord(l[nx][ny]) - 65] = 0
 
-alphabet[ord(l[0][0]) - ord('A')] = True
-DFS((0, 0), 1)
+alphabet[ord(l[0][0]) - 65] = 1
+DFS(0, 0, 1)
 print(res)
