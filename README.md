@@ -1,6 +1,11 @@
 # Algorithm
 
-Solved problems in BOJ, Programmers, CodeUp
+Solved problems in ...
+
++ BOJ
++ CodeUp
++ Codility
++ Programmers
 
 <p align = "center">
     <a href = "https://solved.ac/Zerohertz/">
