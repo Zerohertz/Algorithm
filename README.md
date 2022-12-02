@@ -3,14 +3,9 @@
 Solved problems in ...
 
 + BOJ
-+ CodeForces
 + CodeUp
 + Codility
 + Programmers
-
-***
-
-## BOJ
 
 <p align = "center">
     <a href = "https://solved.ac/Zerohertz/">
@@ -22,15 +17,3 @@ Solved problems in ...
         <img src="http://mazandi.herokuapp.com/api?handle=Zerohertz&theme=warm"/>
     </a>
 </p>
-
-<!--
-***
-
-## CodeForces
-
-<p align = "center">
-    <a href = "https://codeforces.com/profile/zerohertz">
-        <img src="https://cf.leed.at?id=zerohertz"/>
-    </a>
-</p>
--->
