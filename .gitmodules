@@ -1,0 +1,3 @@
+[submodule "CodingTest"]
+	path = CodingTest
+	url = https://github.com/Zerohertz/CodingTest
