@@ -6,6 +6,7 @@ read = sys.stdin.readline
 v1 = [1, 0, -1, 0]
 v2 = [0, 1, 0, -1]
 
+
 def BFS(x, y):
     res = 0
     visit = [[False for _ in range(w + 2)] for _ in range(h + 2)]
@@ -21,7 +22,8 @@ def BFS(x, y):
                     q.append((nx, ny))
                 elif l[nx][ny].islower():
                     door[ord(l[nx][ny]) - ord('a')] = True
-                    visit = [[False for _ in range(w + 2)] for _ in range(h + 2)]
+                    visit = [[False for _ in range(w + 2)]
+                             for _ in range(h + 2)]
                     l[nx][ny] = '.'
                     q.append((nx, ny))
                 elif l[nx][ny].isupper():
@@ -36,6 +38,7 @@ def BFS(x, y):
                     q.append((nx, ny))
     print(res)
 
+
 T = int(read())
 
 for _ in range(T):
@@ -48,7 +51,8 @@ for _ in range(T):
             door[ord(key) - ord('a')] = True
     for i in range(h):
         for j in range(w):
-            if ord('A') <= ord(l[i][j]) <= ord('Z') and door[ord(l[i][j]) - ord('A')]:
+            if ord('A') <= ord(l[i][j]) <= ord(
+                    'Z') and door[ord(l[i][j]) - ord('A')]:
                 l[i][j] = '.'
     for i in l:
         i.insert(0, '.')

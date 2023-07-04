@@ -1,14 +1,17 @@
 import math
 
+
 def rad2deg(rad):
     deg = rad * 180 / math.pi
     return abs(deg)
+
 
 def mean(list):
     avg = 0
     for i in list:
         avg = avg + i / len(list)
     return avg
+
 
 def returnAngle(x, y):
     if y == 0:
@@ -31,11 +34,13 @@ def returnAngle(x, y):
     elif x > 0 and y < 0:
         return rad2deg(rad) + 270
 
+
 def returnAngle2(x1, y1, x2, y2):
     a1 = returnAngle(x1, y1)
     a2 = returnAngle(x2, y2)
     resultAngle = [a1, a2]
     return resultAngle
+
 
 def checkHit(angleCheckList, x1, y1, x2, y2, angleHitList):
     tmp = 0
@@ -56,11 +61,19 @@ def checkHit(angleCheckList, x1, y1, x2, y2, angleHitList):
         tmp = tmp + 1
     return angleHitList
 
+
 def returnAvg(x1, y1, x2, y2, angleHitList):
     angleCheckList = [i / 100 for i in range(36001)]
     for i in range(len(x1)):
-        angleHitList = checkHit(angleCheckList, x1[i], y1[i], x2[i], y2[i], angleHitList)
+        angleHitList = checkHit(
+            angleCheckList,
+            x1[i],
+            y1[i],
+            x2[i],
+            y2[i],
+            angleHitList)
     return mean(angleHitList)
+
 
 T = int(input())
 

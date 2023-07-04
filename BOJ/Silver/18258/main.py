@@ -1,6 +1,8 @@
 import sys
 from collections import deque
+
 read = sys.stdin.readline
+
 
 def comm(s):
     if 'push' == s[0]:
@@ -8,7 +10,7 @@ def comm(s):
     elif 'pop' == s[0]:
         try:
             print(q.popleft())
-        except:
+        except BaseException:
             print(-1)
     elif 'size' == s[0]:
         print(len(q))
@@ -20,12 +22,12 @@ def comm(s):
     elif 'front' == s[0]:
         try:
             print(q[0])
-        except:
+        except BaseException:
             print(-1)
     elif 'back' == s[0]:
         try:
             print(q[-1])
-        except:
+        except BaseException:
             print(-1)
 
 

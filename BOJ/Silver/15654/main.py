@@ -3,10 +3,10 @@ import sys
 read = sys.stdin.readline
 
 N, M = map(int, read().split())
-lst = list(map(int, read().split()))
-lst.sort()
+lst = sorted(map(int, read().split()))
 
 l = []
+
 
 def DFS():
     if len(l) == M:
@@ -18,5 +18,6 @@ def DFS():
                 l.append(i)
                 DFS()
                 l.pop()
+
 
 DFS()

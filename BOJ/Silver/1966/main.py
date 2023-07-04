@@ -1,3 +1,6 @@
+import sys
+
+
 def printer(l):
     dupl = [i for i in l]
     dupl.sort(key=lambda x: x[0])
@@ -10,8 +13,6 @@ def printer(l):
         del l[0]
     return l
 
-
-import sys
 
 read = sys.stdin.readline
 

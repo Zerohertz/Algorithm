@@ -29,6 +29,7 @@ def BFS(A, ix, iy):
     else:
         return 1
 
+
 if __name__ == "__main__":
     read = sys.stdin.readline
     N, L, R = map(int, read().split())

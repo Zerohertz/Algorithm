@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def rotate_right(x, d):
     if x > 4 or gears[x - 1][2] == gears[x][6]:
         return
@@ -7,12 +8,14 @@ def rotate_right(x, d):
         rotate_right(x + 1, -d)
         gears[x].rotate(d)
 
+
 def rotate_left(x, d):
     if x < 1 or gears[x][2] == gears[x + 1][6]:
         return
     if gears[x][2] != gears[x + 1][6]:
         rotate_left(x - 1, -d)
         gears[x].rotate(d)
+
 
 gears = {}
 for i in range(1, 5):

@@ -20,5 +20,5 @@ for i in range(n):
     d = convertMatrix(sticks[:][i], d)
 for i in range(a):
     for j in range(b):
-        print(d[i][j], end = ' ')
+        print(d[i][j], end=' ')
     print()

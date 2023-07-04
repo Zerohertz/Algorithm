@@ -1,5 +1,7 @@
 import sys
+
 read = sys.stdin.readline
+
 
 def cal(mat, x, y):
     for i in range(3):

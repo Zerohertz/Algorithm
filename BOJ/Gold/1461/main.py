@@ -1,4 +1,5 @@
 import sys
+
 read = sys.stdin.readline
 
 N, M = map(int, read().split())
@@ -9,23 +10,23 @@ m = []
 cnt = []
 
 for i in l:
-  if i > 0:
-    p.append(i)
-  else:
-    m.append(abs(i))
+    if i > 0:
+        p.append(i)
+    else:
+        m.append(abs(i))
 
-p.sort(reverse = True)
-m.sort(reverse = True)
+p.sort(reverse=True)
+m.sort(reverse=True)
 
 for i in range(len(p) // M):
-  cnt.append(p[i * M])
+    cnt.append(p[i * M])
 if len(p) % M > 0:
-  cnt.append(p[(len(p) // M) * M])
+    cnt.append(p[(len(p) // M) * M])
 
 for i in range(len(m) // M):
-  cnt.append(m[i * M])
+    cnt.append(m[i * M])
 if len(m) % M > 0:
-  cnt.append(m[(len(m) // M) * M])
+    cnt.append(m[(len(m) // M) * M])
 
 cnt.sort()
 

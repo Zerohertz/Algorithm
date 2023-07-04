@@ -1,4 +1,5 @@
 import sys
+
 read = sys.stdin.readline
 
 N = int(read())
@@ -7,8 +8,8 @@ a = [i for i in A]
 a.sort()
 P = []
 for i in A:
-  P.append(a.index(i))
-  a[a.index(i)] = -100
+    P.append(a.index(i))
+    a[a.index(i)] = -100
 
 for res in P:
-  print(res, end = " ")
+    print(res, end=" ")

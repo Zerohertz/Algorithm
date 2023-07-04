@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def solution(progresses, speeds):
     p = deque(progresses)
     s = deque(speeds)

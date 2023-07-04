@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def solution(participant, completion):
     participant.sort()
     completion.sort()

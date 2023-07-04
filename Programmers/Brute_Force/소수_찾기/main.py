@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def cPN(n):
     if n < 2:
         return False
@@ -7,6 +8,7 @@ def cPN(n):
         if n % i == 0:
             return False
     return True
+
 
 def solution(numbers):
     answer = []

@@ -1,8 +1,10 @@
 import math
 
+
 def rad2deg(rad):
     deg = rad * 180 / math.pi
     return abs(deg)
+
 
 def returnAngle(x, y):
     if y == 0:
@@ -25,6 +27,7 @@ def returnAngle(x, y):
     elif x > 0 and y < 0:
         return rad2deg(rad) + 270
 
+
 def returnPartialAvg(x1, y1, x2, y2):
     a1 = returnAngle(x1, y1)
     a2 = returnAngle(x2, y2)
@@ -33,11 +36,13 @@ def returnPartialAvg(x1, y1, x2, y2):
     avg = resultAngle % 180 / 360
     return avg
 
+
 def returnAvg(x1, y1, x2, y2):
     avg = 0
     for i in range(len(x1)):
         avg = returnPartialAvg(x1[i], y1[i], x2[i], y2[i]) + avg
     return avg
+
 
 T = int(input())
 

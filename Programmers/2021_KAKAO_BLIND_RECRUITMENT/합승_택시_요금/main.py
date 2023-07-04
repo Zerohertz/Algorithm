@@ -1,5 +1,6 @@
 import sys
 
+
 def solution(n, s, a, b, fares):
     answer = sys.maxsize
     s -= 1

@@ -1,6 +1,7 @@
+import heapq
 import sys
 from itertools import combinations
-import heapq
+
 read = sys.stdin.readline
 
 

@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def BFS(computers, n, visit):
     q = deque()
     cnt = 0
@@ -15,6 +16,7 @@ def BFS(computers, n, visit):
                     visit[j] = True
                     q.append(j)
     return cnt
+
 
 def solution(n, computers):
     visit = [False for _ in range(n)]

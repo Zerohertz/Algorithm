@@ -1,6 +1,7 @@
 def solution(numbers, target):
     answer = 0
     l = len(numbers)
+
     def DFS(idx, result):
         if idx == l:
             if result == target:

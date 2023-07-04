@@ -2,6 +2,7 @@
 # print("this is a debug message")
 from collections import Counter
 
+
 def solution(A):
     # write your code in Python 3.8.10
     cnt = Counter(A)

@@ -1,6 +1,8 @@
 import sys
+
 sys.setrecursionlimit(10 ** 9)
 read = sys.stdin.readline
+
 
 def init(node, start, end):
     if start == end:
@@ -12,6 +14,7 @@ def init(node, start, end):
         tree[node] = min(x, y)
         return tree[node]
 
+
 def segMin(node, start, end, left, right):
     if left > end or right < start:
         return sys.maxsize
@@ -20,6 +23,7 @@ def segMin(node, start, end, left, right):
     x = segMin(node * 2, start, (start + end) // 2, left, right)
     y = segMin(node * 2 + 1, (start + end) // 2 + 1, end, left, right)
     return min(x, y)
+
 
 N, M = map(int, read().split())
 

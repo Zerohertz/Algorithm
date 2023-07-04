@@ -4,6 +4,7 @@ read = sys.stdin.readline
 N, M = map(int, read().split())
 l = []
 
+
 def DFS(start):
     if len(l) == M:
         print(' '.join(map(str, l)))
@@ -13,5 +14,6 @@ def DFS(start):
             l.append(i)
             DFS(i + 1)
             l.pop()
+
 
 DFS(1)

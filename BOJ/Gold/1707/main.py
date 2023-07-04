@@ -5,6 +5,7 @@ sys.setrecursionlimit(1_000_000)
 
 K = int(read())
 
+
 def DFS(pos, c):
     color[pos] = c
     for i in G[pos]:
@@ -15,6 +16,7 @@ def DFS(pos, c):
         elif color[pos] == color[i]:
             return False
     return True
+
 
 for _ in range(K):
     V, E = map(int, read().split())

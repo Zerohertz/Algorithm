@@ -1,6 +1,7 @@
 from collections import deque
 from itertools import combinations
 
+
 def BFS(n, wiresmap):
     q = deque([])
     visit = [False for _ in range(n + 1)]
@@ -21,6 +22,7 @@ def BFS(n, wiresmap):
                         q.append(j)
             status = False
     return abs(cnt0 - cnt1)
+
 
 def solution(n, wires):
     answer = []

@@ -18,6 +18,7 @@ for i in range(R):
 v1 = [1, 0, -1, 0]
 v2 = [0, 1, 0, -1]
 
+
 def BFS():
     while q:
         x, y = q.popleft()
@@ -34,6 +35,7 @@ def BFS():
                     time[nx][ny] = time[x][y] + 1
                     q.append((nx, ny))
     return "KAKTUS"
+
 
 q = deque([S])
 for i in range(R):

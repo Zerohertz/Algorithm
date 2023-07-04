@@ -16,6 +16,7 @@ for i in range(N):
 v1 = [1, 0, -1, 0]
 v2 = [0, 1, 0, -1]
 
+
 def BFS(s1, s2, k):
     q = deque([(s1, s2)])
     v[s1][s2] = True
@@ -26,6 +27,7 @@ def BFS(s1, s2, k):
                 if l[tmp[0] + i][tmp[1] + j] > k and not v[tmp[0] + i][tmp[1] + j]:
                     q.append((tmp[0] + i, tmp[1] + j))
                     v[tmp[0] + i][tmp[1] + j] = True
+
 
 res = 1
 for k in range(m, M):

@@ -1,6 +1,6 @@
-def solution(A,B):
+def solution(A, B):
     A.sort()
-    B.sort(reverse = True)
+    B.sort(reverse=True)
     answer = 0
     for i, j in zip(A, B):
         answer += i * j

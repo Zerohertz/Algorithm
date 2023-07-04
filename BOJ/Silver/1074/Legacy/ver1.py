@@ -1,7 +1,9 @@
 import sys
+
 read = sys.stdin.readline
 
 tmp = [0]
+
 
 def zzz(x, y, n):
     if n != 2:
@@ -17,6 +19,7 @@ def zzz(x, y, n):
             for tmpy in range(y, y + n):
                 l[tmpx][tmpy] = tmp[0]
                 tmp[0] += 1
+
 
 N, c, r = map(int, read().split())
 l = [[-1 for _ in range(2 ** N)] for _ in range(2 ** N)]

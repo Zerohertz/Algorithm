@@ -1,5 +1,6 @@
 import heapq
 
+
 def solution(operations):
     mheap = []
     Mheap = []

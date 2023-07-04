@@ -1,5 +1,6 @@
 import heapq
 
+
 def solution(genres, plays):
     answer = []
     d = {}
@@ -9,7 +10,7 @@ def solution(genres, plays):
         try:
             heapq.heappush(d[genre], (-play, idx))
             ds[genre] += play
-        except:
+        except BaseException:
             d[genre] = [(-play, idx)]
             ds[genre] = play
         idx += 1
@@ -17,12 +18,12 @@ def solution(genres, plays):
     for i, key in zip(range(len(ds)), ds.keys()):
         l[i].append(ds[key])
         l[i].append(key)
-    l.sort(key = lambda x: x[0], reverse = True)
+    l.sort(key=lambda x: x[0], reverse=True)
     for i in l:
         for _ in range(2):
             try:
                 tmp = heapq.heappop(d[i[1]])
                 answer.append(tmp[1])
-            except:
+            except BaseException:
                 continue
     return answer

@@ -2,6 +2,7 @@ import sys
 
 N = int(sys.stdin.readline())
 
+
 def recur(N):
     if N == 1:
         return ['*']
@@ -14,5 +15,6 @@ def recur(N):
     for t in tmp:
         l.append(t * 3)
     return l
+
 
 print('\n'.join(recur(N)))

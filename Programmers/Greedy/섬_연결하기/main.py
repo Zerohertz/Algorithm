@@ -1,6 +1,6 @@
 def solution(n, costs):
     answer = 0
-    costs.sort(key = lambda x: x[2])
+    costs.sort(key=lambda x: x[2])
     s = set([costs[0][0]])
     while len(s) != n:
         for i, cost in enumerate(costs):

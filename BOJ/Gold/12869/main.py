@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def solution(x, y, z, cnt):
     global ans
     if x <= 0 and y <= 0 and z <= 0:
@@ -15,11 +16,13 @@ def solution(x, y, z, cnt):
     for i, j, k in permutations([9, 3, 1], 3):
         solution(x - i, y - j, z - k, cnt + 1)
 
+
 N = int(input())
 SCV = list(map(int, input().split()))
 while len(SCV) < 3:
     SCV += [0]
 ans = 100
-dp = [[[100] * (max(SCV) + 1) for i in range((max(SCV) + 1))] for j in range((max(SCV) + 1))]
+dp = [[[100] * (max(SCV) + 1) for i in range((max(SCV) + 1))]
+      for j in range((max(SCV) + 1))]
 solution(SCV[0], SCV[1], SCV[2], 0)
 print(ans)

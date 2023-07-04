@@ -1,6 +1,5 @@
-import sys
 import datetime
-
+import sys
 
 if __name__ == "__main__":
     read = sys.stdin.readline

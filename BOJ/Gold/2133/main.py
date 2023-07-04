@@ -1,4 +1,5 @@
 import sys
+
 read = sys.stdin.readline
 
 dp = [0 for _ in range(31)]

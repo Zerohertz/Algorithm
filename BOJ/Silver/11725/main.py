@@ -3,6 +3,7 @@ from collections import deque
 
 read = sys.stdin.readline
 
+
 def BFS():
     q = deque([1])
     par = [0 for _ in range(N + 1)]

@@ -10,14 +10,14 @@ def prime_list(n):
 
 N = int(input())
 noList = list(map(int, input().split()))
-pList = prime_list(max(noList)+1)
+pList = prime_list(max(noList) + 1)
 
 tmp = 0
 
 if N == len(noList):
-  for i in noList:
-    for j in pList:
-      if i == j:
-        tmp += 1
+    for i in noList:
+        for j in pList:
+            if i == j:
+                tmp += 1
 
 print(tmp)

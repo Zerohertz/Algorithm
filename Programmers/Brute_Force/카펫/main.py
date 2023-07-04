@@ -1,5 +1,6 @@
 from itertools import combinations_with_replacement
 
+
 def solution(brown, yellow):
     l = []
     for i in range(1, brown + yellow + 1):

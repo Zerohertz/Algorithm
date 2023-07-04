@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def solution(priorities, location):
     priorities = [[i, j] for i, j in enumerate(priorities)]
     priorities = deque(priorities)

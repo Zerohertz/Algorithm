@@ -6,12 +6,14 @@ def find_par(x):
         par[x] = find_par(par[x])
     return par[x]
 
+
 def union(b, c):
     b, c = find_par(b), find_par(c)
     if b < c:
         par[c] = b
     else:
         par[b] = c
+
 
 if __name__ == "__main__":
     sys.setrecursionlimit(1_000_000_000)

@@ -1,5 +1,6 @@
 from itertools import permutations
 
+
 def solution(k, dungeons):
     answer = []
     dungeonslist = permutations(dungeons)
