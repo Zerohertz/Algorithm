@@ -27,13 +27,23 @@ def BFS():
             return visited[x][y][tmpK]
         for i in range(4):
             nx, ny = x + m1[i], y + m2[i]
-            if 0 <= nx < H and 0 <= ny < W and not G[nx][ny] == 1 and visited[nx][ny][tmpK] == 0:
+            if (
+                0 <= nx < H
+                and 0 <= ny < W
+                and not G[nx][ny] == 1
+                and visited[nx][ny][tmpK] == 0
+            ):
                 visited[nx][ny][tmpK] = visited[x][y][tmpK] + 1
                 q.append((nx, ny, tmpK))
         if tmpK > 0:
             for i in range(8):
                 nx, ny = x + h1[i], y + h2[i]
-                if 0 <= nx < H and 0 <= ny < W and not G[nx][ny] == 1 and visited[nx][ny][tmpK - 1] == 0:
+                if (
+                    0 <= nx < H
+                    and 0 <= ny < W
+                    and not G[nx][ny] == 1
+                    and visited[nx][ny][tmpK - 1] == 0
+                ):
                     visited[nx][ny][tmpK - 1] = visited[x][y][tmpK] + 1
                     q.append((nx, ny, tmpK - 1))
     return -1

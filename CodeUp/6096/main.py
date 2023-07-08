@@ -12,19 +12,19 @@ for i in range(n):
 
 for i in x:
     for j in range(19):
-        if d[i][j] == '1':
-            d[i][j] = '0'
+        if d[i][j] == "1":
+            d[i][j] = "0"
         else:
-            d[i][j] = '1'
+            d[i][j] = "1"
 
 for i in y:
     for j in range(19):
-        if d[j][i] == '1':
-            d[j][i] = '0'
+        if d[j][i] == "1":
+            d[j][i] = "0"
         else:
-            d[j][i] = '1'
+            d[j][i] = "1"
 
 for i in range(19):
     for j in range(19):
-        print(d[i][j], end=' ')
+        print(d[i][j], end=" ")
     print()

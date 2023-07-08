@@ -7,7 +7,7 @@ l = []
 
 def DFS(start):
     if len(l) == M:
-        print(' '.join(map(str, l)))
+        print(" ".join(map(str, l)))
         return
     for i in range(start, N + 1):
         if not i in l:

@@ -32,13 +32,13 @@ def dupL(L):
 
 def returnScore(T1, T2, T3, T4):
     sc = 0
-    if T1[0] == '1':
+    if T1[0] == "1":
         sc += 1
-    if T2[0] == '1':
+    if T2[0] == "1":
         sc += 2
-    if T3[0] == '1':
+    if T3[0] == "1":
         sc += 4
-    if T4[0] == '1':
+    if T4[0] == "1":
         sc += 8
     return sc
 

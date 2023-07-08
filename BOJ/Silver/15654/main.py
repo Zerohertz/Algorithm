@@ -10,7 +10,7 @@ l = []
 
 def DFS():
     if len(l) == M:
-        print(' '.join(list(map(str, l))))
+        print(" ".join(list(map(str, l))))
         return
     else:
         for i in lst:

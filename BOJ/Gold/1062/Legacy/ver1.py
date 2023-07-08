@@ -7,7 +7,7 @@ N, K = map(int, read().split())
 
 s = set()
 wordset = []
-antic = set('antic')
+antic = set("antic")
 tupleantic = tuple(antic)
 
 for i in range(N):

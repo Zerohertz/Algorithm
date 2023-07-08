@@ -1,5 +1,4 @@
 def solution(numbers):
-    answer = ''
     numarr = list(map(str, numbers))
     numarr.sort(key=lambda x: x * 3, reverse=True)
-    return str(int(''.join(numarr)))
+    return str(int("".join(numarr)))

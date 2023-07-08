@@ -5,5 +5,5 @@ def solution(number, k):
             answer.pop()
             k -= 1
         answer.append(n)
-    answer = ''.join(answer[:len(number) - k])
+    answer = "".join(answer[: len(number) - k])
     return answer

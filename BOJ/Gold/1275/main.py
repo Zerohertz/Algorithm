@@ -8,8 +8,9 @@ def init(node, start, end):
         tree[node] = l[start]
         return tree[node]
     else:
-        tree[node] = init(node * 2, start, (start + end) // 2) + \
-            init(node * 2 + 1, (start + end) // 2 + 1, end)
+        tree[node] = init(node * 2, start, (start + end) // 2) + init(
+            node * 2 + 1, (start + end) // 2 + 1, end
+        )
         return tree[node]
 
 
@@ -27,8 +28,9 @@ def segSum(node, start, end, left, right):
         return 0
     if left <= start and end <= right:
         return tree[node]
-    return segSum(node * 2, start, (start + end) // 2, left, right) + \
-        segSum(node * 2 + 1, (start + end) // 2 + 1, end, left, right)
+    return segSum(node * 2, start, (start + end) // 2, left, right) + segSum(
+        node * 2 + 1, (start + end) // 2 + 1, end, left, right
+    )
 
 
 N, Q = map(int, read().split())

@@ -22,7 +22,7 @@ def zzz(x, y, n):
 
 
 N, c, r = map(int, read().split())
-l = [[-1 for _ in range(2 ** N)] for _ in range(2 ** N)]
+l = [[-1 for _ in range(2**N)] for _ in range(2**N)]
 
-zzz(0, 0, 2 ** N)
+zzz(0, 0, 2**N)
 print(l[c][r])

@@ -14,5 +14,5 @@ for i in range(n):
 
 for i in range(19):
     for j in range(19):
-        print(d[i][j], end=' ')
+        print(d[i][j], end=" ")
     print()

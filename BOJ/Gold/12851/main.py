@@ -13,8 +13,7 @@ def BFS(pos):
     while q:
         tmp, t = q.popleft()
         for i in [tmp - 1, tmp + 1, tmp * 2]:
-            if 0 <= i <= 100_000 and (
-                    visit[i][0] == -1 or visit[i][0] == t + 1):
+            if 0 <= i <= 100_000 and (visit[i][0] == -1 or visit[i][0] == t + 1):
                 if visit[i][0] == t + 1:
                     visit[i][1] += visit[tmp][1]
                 else:

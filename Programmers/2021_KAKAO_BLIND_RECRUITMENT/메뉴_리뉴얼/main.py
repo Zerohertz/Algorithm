@@ -7,7 +7,7 @@ def solution(orders, course):
         ord = {}
         for order in orders:
             for tmporder in combinations(sorted(order), c):
-                tmp = ''.join(tmporder)
+                tmp = "".join(tmporder)
                 if tmp in ord:
                     ord[tmp] += 1
                 else:

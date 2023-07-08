@@ -13,12 +13,16 @@ for i in range(N):
 
 def n2n(i, j, dir):
     while True:
-        if not (((0 <= i < N) and (0 <= j < N)) and (
-                (0 <= i + dir[1] < N) and (0 <= j + dir[0] < N))):
+        if not (
+            ((0 <= i < N) and (0 <= j < N))
+            and ((0 <= i + dir[1] < N) and (0 <= j + dir[0] < N))
+        ):
             break
         elif not G[i][j] == 0:
-            if G[i + dir[1]][j + dir[0]
-                             ] == G[i][j] and not visited[i + dir[1]][j + dir[0]]:
+            if (
+                G[i + dir[1]][j + dir[0]] == G[i][j]
+                and not visited[i + dir[1]][j + dir[0]]
+            ):
                 G[i + dir[1]][j + dir[0]] = G[i][j] * 2
                 G[i][j] = 0
                 visited[i + dir[1]][j + dir[0]] = True

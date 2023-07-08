@@ -34,9 +34,9 @@ def tile(x, y, K, pos):
         tmp += 1
         return
     tile(x, y, K - 1, 0)
-    tile(x, y + 2**(K - 1), K - 1, 1)
-    tile(x + 2**(K - 1), y, K - 1, 2)
-    tile(x + 2**(K - 1), y + 2**(K - 1), K - 1, 3)
+    tile(x, y + 2 ** (K - 1), K - 1, 1)
+    tile(x + 2 ** (K - 1), y, K - 1, 2)
+    tile(x + 2 ** (K - 1), y + 2 ** (K - 1), K - 1, 3)
     tile(x + 2**K // 4, y + 2**K // 4, K - 1, 4)
 
 
@@ -51,5 +51,5 @@ tile(0, 0, K, 0)
 
 for i in l:
     for j in i:
-        print(j, end=' ')
+        print(j, end=" ")
     print()

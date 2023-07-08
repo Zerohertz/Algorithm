@@ -29,4 +29,4 @@ for _ in range(l[K] + 1):
     res.append(tmp)
     tmp = c[tmp]
 for i in res[::-1]:
-    print(i, end=' ')
+    print(i, end=" ")

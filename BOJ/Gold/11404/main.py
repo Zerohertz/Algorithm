@@ -21,7 +21,7 @@ for i in range(n):
 for i in res:
     for j in i:
         if j == INF:
-            print(0, end=' ')
+            print(0, end=" ")
         else:
-            print(j, end=' ')
+            print(j, end=" ")
     print()

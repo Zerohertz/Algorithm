@@ -24,16 +24,15 @@ snake = deque([(0, 0)])
 dir_x, dir_y = 1, 0
 time = 0
 
-rightTurn = {(1, 0): (0, 1), (0, 1): (-1, 0),
-             (-1, 0): (0, -1), (0, -1): (1, 0)}
+rightTurn = {(1, 0): (0, 1), (0, 1): (-1, 0), (-1, 0): (0, -1), (0, -1): (1, 0)}
 leftTurn = {(1, 0): (0, -1), (0, -1): (-1, 0), (-1, 0): (0, 1), (0, 1): (1, 0)}
 
 while True:
     x, y = snake[0]
     if time in timeline.keys():
-        if timeline[time] == 'L':
+        if timeline[time] == "L":
             dir_x, dir_y = leftTurn[(dir_x, dir_y)]
-        elif timeline[time] == 'D':
+        elif timeline[time] == "D":
             dir_x, dir_y = rightTurn[(dir_x, dir_y)]
     nx, ny = x + dir_x, y + dir_y
     if (nx, ny) in snake:

@@ -26,6 +26,6 @@ if __name__ == "__main__":
             union(b, c)
         else:
             if find_par(b) == find_par(c):
-                print('YES')
+                print("YES")
             else:
-                print('NO')
+                print("NO")

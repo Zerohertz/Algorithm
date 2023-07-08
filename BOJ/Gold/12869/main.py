@@ -22,7 +22,9 @@ SCV = list(map(int, input().split()))
 while len(SCV) < 3:
     SCV += [0]
 ans = 100
-dp = [[[100] * (max(SCV) + 1) for i in range((max(SCV) + 1))]
-      for j in range((max(SCV) + 1))]
+dp = [
+    [[100] * (max(SCV) + 1) for i in range((max(SCV) + 1))]
+    for j in range((max(SCV) + 1))
+]
 solution(SCV[0], SCV[1], SCV[2], 0)
 print(ans)

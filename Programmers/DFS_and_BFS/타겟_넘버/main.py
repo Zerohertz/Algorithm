@@ -11,5 +11,6 @@ def solution(numbers, target):
         else:
             DFS(idx + 1, result + numbers[idx])
             DFS(idx + 1, result - numbers[idx])
+
     DFS(0, 0)
     return answer

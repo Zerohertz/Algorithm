@@ -15,7 +15,7 @@ m = 1
 M = max(l)
 ans = 0
 
-while (m <= M):
+while m <= M:
     mid = int((m + M) / 2)
     if countLan(l, mid) >= N:
         m = mid + 1

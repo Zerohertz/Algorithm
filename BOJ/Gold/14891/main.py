@@ -29,6 +29,6 @@ for _ in range(int(input())):
 
 ans = 0
 for i in range(4):
-    ans += gears[i + 1][0] * (2 ** i)
+    ans += gears[i + 1][0] * (2**i)
 
 print(ans)

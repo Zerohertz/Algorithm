@@ -40,7 +40,7 @@ def DFS(idx):
     if len(target) == idx:
         for i in range(9):
             for j in range(9):
-                print(l[i][j], end='')
+                print(l[i][j], end="")
             print()
         exit()
     x, y = target[idx]

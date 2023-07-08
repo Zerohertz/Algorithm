@@ -37,12 +37,13 @@ def goForward(robotNo, cnt):
         nx = x + ang[0] * i
         ny = y + ang[1] * i
         if not (0 <= nx < A) or not (0 <= ny < B):
-            print('Robot ' + str(robotNo + 1) + ' crashes into the wall')
+            print("Robot " + str(robotNo + 1) + " crashes into the wall")
             status = False
             break
         if G[nx][ny][0] != 0:
-            print('Robot ' + str(robotNo + 1) +
-                  ' crashes into robot ' + str(G[nx][ny][0]))
+            print(
+                "Robot " + str(robotNo + 1) + " crashes into robot " + str(G[nx][ny][0])
+            )
             status = False
             break
     if status:
@@ -57,7 +58,7 @@ M, N = map(int, read().split())
 
 G = [[[0, 0, 0] for _ in range(B)] for _ in range(A)]
 pos = []
-ang = {'E': [1, 0], 'N': [0, 1], 'W': [-1, 0], 'S': [0, -1]}
+ang = {"E": [1, 0], "N": [0, 1], "W": [-1, 0], "S": [0, -1]}
 
 for i in range(M):
     a, b, c = map(str, read().split())
@@ -72,19 +73,19 @@ for _ in range(N):
 
 status = True
 for command in commands:
-    if command[1] == 'L':
+    if command[1] == "L":
         robotNo = int(command[0]) - 1
         cnt = int(command[2])
         turnLeft(robotNo, cnt)
-    elif command[1] == 'R':
+    elif command[1] == "R":
         robotNo = int(command[0]) - 1
         cnt = int(command[2])
         turnRight(robotNo, cnt)
-    elif command[1] == 'F':
+    elif command[1] == "F":
         robotNo = int(command[0]) - 1
         cnt = int(command[2])
         status = goForward(robotNo, cnt)
     if not status:
         break
 if status:
-    print('OK')
+    print("OK")

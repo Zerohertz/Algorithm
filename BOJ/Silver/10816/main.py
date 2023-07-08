@@ -12,6 +12,6 @@ scard = list(map(int, input().split()))
 
 for i in scard:
     if i in ndict:
-        print(ndict[i], end=' ')
+        print(ndict[i], end=" ")
     else:
-        print(0, end=' ')
+        print(0, end=" ")

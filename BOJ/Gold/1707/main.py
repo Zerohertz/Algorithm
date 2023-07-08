@@ -32,6 +32,6 @@ for _ in range(K):
             if not res:
                 break
     if res:
-        print('YES')
+        print("YES")
     else:
-        print('NO')
+        print("NO")

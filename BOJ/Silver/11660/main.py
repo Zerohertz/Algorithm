@@ -11,8 +11,7 @@ for i in range(N):
 
 for i in range(N):
     for j in range(N):
-        dp[i + 1][j + 1] = l[i + 1][j + 1] + \
-            dp[i + 1][j] + dp[i][j + 1] - dp[i][j]
+        dp[i + 1][j + 1] = l[i + 1][j + 1] + dp[i + 1][j] + dp[i][j + 1] - dp[i][j]
 
 for _ in range(M):
     x1, y1, x2, y2 = map(int, read().split())

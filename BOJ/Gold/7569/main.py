@@ -14,8 +14,15 @@ def bfs(g):
             z2 = z1 + v1[i]
             y2 = y1 + v2[i]
             x2 = x1 + v3[i]
-            if 0 <= x2 and x2 < M and 0 <= y2 and y2 < N and 0 <= z2 and z2 < H and g[
-                    z2][y2][x2] == 0:
+            if (
+                0 <= x2
+                and x2 < M
+                and 0 <= y2
+                and y2 < N
+                and 0 <= z2
+                and z2 < H
+                and g[z2][y2][x2] == 0
+            ):
                 q.append([z2, y2, x2])
                 g[z2][y2][x2] = g[z1][y1][x1] + 1
 

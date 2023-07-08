@@ -8,7 +8,7 @@ res = []
 
 for i in range(1, 10):
     for j in combinations(l, i):
-        res.append(int(''.join(j[::-1])))
+        res.append(int("".join(j[::-1])))
 
 res.sort()
 res.append(9876543210)

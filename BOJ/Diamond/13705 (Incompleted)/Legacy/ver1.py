@@ -7,7 +7,7 @@ def f(A, B, C, x):
 
 
 def fp(A, B, x):
-    return - A - B * math.cos(x)
+    return -A - B * math.cos(x)
 
 
 def newrap(A, B, C, x):

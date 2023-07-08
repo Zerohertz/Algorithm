@@ -1,7 +1,7 @@
 def solution(s):
-    answer = ''
-    l = s.split(' ')
-    answer = ''
+    answer = ""
+    l = s.split(" ")
+    answer = ""
     for i in l:
         tmp = 0
         for j in i:
@@ -17,6 +17,6 @@ def solution(s):
                     answer += chr(ord(j) + 32)
                 else:
                     answer += j
-        answer += ' '
+        answer += " "
     answer = answer.strip()
     return answer

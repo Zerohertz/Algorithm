@@ -6,7 +6,7 @@ read = sys.stdin.readline
 L, C = map(int, read().split())
 S = sorted(map(str, read().split()))
 
-moum = set('aeiou')
+moum = set("aeiou")
 
 for i in combinations(S, L):
     cntmoum = 0
@@ -17,4 +17,4 @@ for i in combinations(S, L):
         else:
             cntjaum += 1
     if cntmoum >= 1 and cntjaum >= 2:
-        print(''.join(i))
+        print("".join(i))

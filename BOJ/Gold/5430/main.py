@@ -9,15 +9,15 @@ for _ in range(T):
     n = int(read())
     l = read().rstrip()
     if n > 0:
-        d = deque(list(map(str, l[1:-1].split(','))))
+        d = deque(list(map(str, l[1:-1].split(","))))
     else:
         d = deque()
     status = True
     rev = 0
     for command in commands:
-        if command == 'R':
+        if command == "R":
             rev += 1
-        elif command == 'D':
+        elif command == "D":
             if n > 0:
                 if rev % 2 == 0:
                     d.popleft()
@@ -26,9 +26,9 @@ for _ in range(T):
                 n -= 1
             else:
                 status = False
-                print('error')
+                print("error")
                 break
     if rev % 2 == 1:
         d.reverse()
     if status:
-        print('[' + ','.join(d) + ']')
+        print("[" + ",".join(d) + "]")

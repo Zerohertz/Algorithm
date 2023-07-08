@@ -5,7 +5,7 @@ read = sys.stdin.readline
 
 
 def DFS(initPos):
-    print(initPos, end=' ')
+    print(initPos, end=" ")
     v[initPos] = True
     for i in g[initPos]:
         if not v[i]:
@@ -18,7 +18,7 @@ def BFS(initPos):
     v[initPos] = True
     while q:
         tmp = q.popleft()
-        print(tmp, end=' ')
+        print(tmp, end=" ")
         for i in g[tmp]:
             if not v[i]:
                 v[i] = True

@@ -17,22 +17,9 @@ def solution(idx1, idx2, cnt):
     if dp[idx1][idx2]:
         return dp[idx1][idx2]
     dp[idx1][idx2] = max(
-        solution(
-            idx1 +
-            1,
-            idx2,
-            cnt +
-            1) +
-        cnt *
-        l[idx1],
-        solution(
-            idx1,
-            idx2 -
-            1,
-            cnt +
-            1) +
-        cnt *
-        l[idx2])
+        solution(idx1 + 1, idx2, cnt + 1) + cnt * l[idx1],
+        solution(idx1, idx2 - 1, cnt + 1) + cnt * l[idx2],
+    )
     return dp[idx1][idx2]
 
 

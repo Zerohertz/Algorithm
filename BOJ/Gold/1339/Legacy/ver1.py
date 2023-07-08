@@ -28,6 +28,6 @@ for i in C[::-1]:
 res = 0
 for i, j in enumerate(l):
     for k in j:
-        res += 10 ** i * d[k]
+        res += 10**i * d[k]
 
 print(res)

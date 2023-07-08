@@ -13,8 +13,8 @@ while queue:
         queue.append(queue.popleft())
     answer.append(queue.popleft())
 
-print("<", end='')
+print("<", end="")
 for i in range(len(answer) - 1):
-    print("%d, " % answer[i], end='')
-print(answer[-1], end='')
+    print("%d, " % answer[i], end="")
+print(answer[-1], end="")
 print(">")

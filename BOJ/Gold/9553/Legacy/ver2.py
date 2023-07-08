@@ -60,5 +60,5 @@ for i in range(T):
         y1.append(b)
         x2.append(c)
         y2.append(d)
-    avg = (returnAvg(x1, y1, x2, y2))
-    print(format(avg, '.5f'))
+    avg = returnAvg(x1, y1, x2, y2)
+    print(format(avg, ".5f"))

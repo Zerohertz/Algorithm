@@ -6,10 +6,10 @@ read = sys.stdin.readline
 def cal(mat, x, y):
     for i in range(3):
         for j in range(3):
-            if mat[x + i][y + j] == '1':
-                mat[x + i][y + j] = '0'
+            if mat[x + i][y + j] == "1":
+                mat[x + i][y + j] = "0"
             else:
-                mat[x + i][y + j] = '1'
+                mat[x + i][y + j] = "1"
 
 
 N, M = map(int, read().split())

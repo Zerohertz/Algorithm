@@ -45,6 +45,6 @@ res.sort()
 print(cnt)
 for i in res:
     if i == 0:
-        print(1, end=' ')
+        print(1, end=" ")
     else:
-        print(i, end=' ')
+        print(i, end=" ")

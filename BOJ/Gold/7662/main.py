@@ -11,11 +11,11 @@ for _ in range(T):
     for key in range(k):
         a, b = read().split()
         b = int(b)
-        if a == 'I':
+        if a == "I":
             heapq.heappush(mheap, (b, key))
             heapq.heappush(Mheap, (-b, key))
             visit[key] = True
-        elif a == 'D':
+        elif a == "D":
             if b == -1:
                 while mheap and not visit[mheap[0][1]]:
                     heapq.heappop(mheap)
@@ -35,4 +35,4 @@ for _ in range(T):
     if mheap and Mheap:
         print(-Mheap[0][0], mheap[0][0])
     else:
-        print('EMPTY')
+        print("EMPTY")

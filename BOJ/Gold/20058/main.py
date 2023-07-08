@@ -9,7 +9,7 @@ dy = (0, 1, 0, -1)
 
 def simulation(board, l, L):
     new_board = [[0] * l for _ in range(l)]
-    r_size = 2 ** L
+    r_size = 2**L
     for y in range(0, l, r_size):
         for x in range(0, l, r_size):
             for i in range(r_size):
@@ -64,7 +64,7 @@ def BFS(board, l):
 
 
 N, Q = map(int, read().split())
-l = 2 ** N
+l = 2**N
 board = [list(map(int, read().split())) for _ in range(l)]
 sim = list(map(int, read().split()))
 for L in sim:

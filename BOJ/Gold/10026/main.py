@@ -4,13 +4,13 @@ from collections import deque
 read = sys.stdin.readline
 
 N = int(read())
-l = [['' for _ in range(N)] for _ in range(N)]
-juklock = [['' for _ in range(N)] for _ in range(N)]
+l = [["" for _ in range(N)] for _ in range(N)]
+juklock = [["" for _ in range(N)] for _ in range(N)]
 for i in range(N):
     l[i] = list(read().rstrip())
     for j in range(N):
-        if l[i][j] == 'G':
-            juklock[i][j] = 'R'
+        if l[i][j] == "G":
+            juklock[i][j] = "R"
         else:
             juklock[i][j] = l[i][j]
 

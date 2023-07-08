@@ -6,8 +6,8 @@ s = sys.stdin.readline().rstrip()
 
 def swap(s, idx1, idx2):
     tmp = s[idx2]
-    s = s[:idx2] + s[idx1] + s[idx2 + 1:]
-    s = s[:idx1] + tmp + s[idx1 + 1:]
+    s = s[:idx2] + s[idx1] + s[idx2 + 1 :]
+    s = s[:idx1] + tmp + s[idx1 + 1 :]
     return s
 
 
@@ -23,18 +23,10 @@ def Palindrome(s, idx1, idx2):
     if idx1 >= idx2:
         return 0
     res = min(
-        Palindrome(
-            s,
-            idx1 + 1,
-            idx2) + 1,
-        Palindrome(
-            s,
-            idx1,
-            idx2 - 1) + 1,
-        Palindrome(
-            s,
-            idx1 + 1,
-            idx2 - 1) + 1)
+        Palindrome(s, idx1 + 1, idx2) + 1,
+        Palindrome(s, idx1, idx2 - 1) + 1,
+        Palindrome(s, idx1 + 1, idx2 - 1) + 1,
+    )
     cache[idx1][idx2] = res
     return res
 

@@ -3,7 +3,7 @@ import sys
 
 
 def f(a, b, h, x):
-    return a * math.e ** (- ((x) ** 2)) + b * x ** (0.5)
+    return a * math.e ** (-((x) ** 2)) + b * x ** (0.5)
 
 
 def integration(a, b, h):
@@ -14,7 +14,7 @@ def integration(a, b, h):
         befx = (i - 1) / resol * h
         tmpx = i / resol * h
         tmpy = (f(a, b, h, befx) + f(a, b, h, tmpx)) / 2
-        V += tmpy ** 2 * math.pi / resol * h
+        V += tmpy**2 * math.pi / resol * h
     return V
 
 

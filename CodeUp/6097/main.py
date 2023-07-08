@@ -1,10 +1,10 @@
 def convertMatrix(stickInfo, matrix):
-    if stickInfo[1] == '0':
+    if stickInfo[1] == "0":
         for i in range(int(stickInfo[0])):
-            matrix[int(stickInfo[2]) - 1][int(stickInfo[3]) - 1 + i] = '1'
-    elif stickInfo[1] == '1':
+            matrix[int(stickInfo[2]) - 1][int(stickInfo[3]) - 1 + i] = "1"
+    elif stickInfo[1] == "1":
         for i in range(int(stickInfo[0])):
-            matrix[int(stickInfo[2]) - 1 + i][int(stickInfo[3]) - 1] = '1'
+            matrix[int(stickInfo[2]) - 1 + i][int(stickInfo[3]) - 1] = "1"
     return matrix
 
 
@@ -20,5 +20,5 @@ for i in range(n):
     d = convertMatrix(sticks[:][i], d)
 for i in range(a):
     for j in range(b):
-        print(d[i][j], end=' ')
+        print(d[i][j], end=" ")
     print()

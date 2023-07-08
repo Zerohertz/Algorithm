@@ -7,8 +7,12 @@ def DFS(maps, pos, cnt):
         return maps
     else:
         for i, j in zip(v1, v2):
-            if pos[0] + i > -1 and pos[1] + j > - \
-                    1 and pos[0] + i < N and pos[1] + j < M:
+            if (
+                pos[0] + i > -1
+                and pos[1] + j > -1
+                and pos[0] + i < N
+                and pos[1] + j < M
+            ):
                 if maps[pos[0] + i][pos[1] + j] == 1:
                     cnt += 1
                     maps[pos[0] + i][pos[1] + j] = cnt

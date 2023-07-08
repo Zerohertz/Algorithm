@@ -14,7 +14,7 @@ def solution(jobs):
             tmp = heapq.heappop(h)
             start = end
             end += tmp[0]
-            answer += (end - tmp[1])
+            answer += end - tmp[1]
             i += 1
         else:
             end += 1

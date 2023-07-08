@@ -10,9 +10,9 @@ for _ in range(T):
     for _ in range(k):
         a, b = read().split()
         b = int(b)
-        if a == 'I':
+        if a == "I":
             Q.append(b)
-        elif a == 'D':
+        elif a == "D":
             if Q:
                 if b == -1:
                     tmp = min(Q)
@@ -23,4 +23,4 @@ for _ in range(T):
     if Q:
         print(max(Q), min(Q))
     else:
-        print('EMPTY')
+        print("EMPTY")

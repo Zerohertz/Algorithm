@@ -35,4 +35,4 @@ while q:
 
 res.sort()
 for i in res:
-    print(i, end=' ')
+    print(i, end=" ")

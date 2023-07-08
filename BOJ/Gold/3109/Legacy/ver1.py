@@ -15,14 +15,14 @@ for i in range(R):
     j = 0
     ii = 0
     while j < C - 1:
-        if l[i + ii][j + 1] == '.':
+        if l[i + ii][j + 1] == ".":
             dict[j + 1] = i + ii
             # l[i + ii][j + 1] = 'x'
-        elif i + ii + 1 < R and l[i + ii + 1][j + 1] == '.':
+        elif i + ii + 1 < R and l[i + ii + 1][j + 1] == ".":
             dict[j + 1] = i + ii + 1
             # l[i + ii + 1][j + 1] = 'x'
             ii += 1
-        elif i + ii - 1 >= 0 and l[i + ii - 1][j + 1] == '.':
+        elif i + ii - 1 >= 0 and l[i + ii - 1][j + 1] == ".":
             dict[j + 1] = i + ii - 1
             # l[i + ii - 1][j + 1] = 'x'
             ii -= 1
@@ -33,5 +33,5 @@ for i in range(R):
         if j >= C - 1:
             for k in range(1, C):
                 print(k)
-                l[dict[k]][k] = 'x'
+                l[dict[k]][k] = "x"
     cnt += 1

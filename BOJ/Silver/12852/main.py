@@ -17,4 +17,4 @@ for i in range(2, N + 1):
 
 print(dp[N][0])
 for i in dp[N][1][::-1]:
-    print(i, end=' ')
+    print(i, end=" ")

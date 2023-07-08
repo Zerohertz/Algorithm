@@ -9,7 +9,7 @@ g = [[] for _ in range(N)]
 for i in range(N):
     s = read().rstrip()
     for j, k in enumerate(s):
-        if k == 'Y':
+        if k == "Y":
             g[i].append(j)
 
 

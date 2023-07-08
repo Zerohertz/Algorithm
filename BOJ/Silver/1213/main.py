@@ -4,8 +4,8 @@ from collections import Counter
 s = sorted(map(str, sys.stdin.readline().rstrip()))
 c = Counter(s)
 cnt = 0
-mid = ''
-res = ''
+mid = ""
+res = ""
 
 for i in c:
     if c[i] % 2 != 0:

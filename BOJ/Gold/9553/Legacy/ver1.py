@@ -66,12 +66,8 @@ def returnAvg(x1, y1, x2, y2, angleHitList):
     angleCheckList = [i / 100 for i in range(36001)]
     for i in range(len(x1)):
         angleHitList = checkHit(
-            angleCheckList,
-            x1[i],
-            y1[i],
-            x2[i],
-            y2[i],
-            angleHitList)
+            angleCheckList, x1[i], y1[i], x2[i], y2[i], angleHitList
+        )
     return mean(angleHitList)
 
 
@@ -97,11 +93,11 @@ avg = []
 
 for i in range(T):
     angleHitList = [0 for i in range(36001)]
-    tmpx1 = x1[N[i - 1] * (i):N[i] * (i + 1)]
-    tmpy1 = y1[N[i - 1] * (i):N[i] * (i + 1)]
-    tmpx2 = x2[N[i - 1] * (i):N[i] * (i + 1)]
-    tmpy2 = y2[N[i - 1] * (i):N[i] * (i + 1)]
+    tmpx1 = x1[N[i - 1] * (i) : N[i] * (i + 1)]
+    tmpy1 = y1[N[i - 1] * (i) : N[i] * (i + 1)]
+    tmpx2 = x2[N[i - 1] * (i) : N[i] * (i + 1)]
+    tmpy2 = y2[N[i - 1] * (i) : N[i] * (i + 1)]
     avg.append(returnAvg(tmpx1, tmpy1, tmpx2, tmpy2, angleHitList))
 
 for i in range(T):
-    print(format(avg[i], '.5f'))
+    print(format(avg[i], ".5f"))

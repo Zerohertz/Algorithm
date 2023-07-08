@@ -30,6 +30,6 @@ while h:
 
 for i in d:
     if i == INF:
-        print('INF')
+        print("INF")
     else:
         print(i)

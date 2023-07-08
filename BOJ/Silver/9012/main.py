@@ -3,13 +3,13 @@ for _ in range(N):
     S = input()
     tmp = 0
     for i in range(len(S)):
-        if S[i] == '(':
+        if S[i] == "(":
             tmp += 1
-        elif S[i] == ')':
+        elif S[i] == ")":
             tmp -= 1
         if tmp < 0:
             tmp = -100
     if tmp == 0:
-        print('YES')
+        print("YES")
     else:
-        print('NO')
+        print("NO")

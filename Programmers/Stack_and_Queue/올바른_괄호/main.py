@@ -1,9 +1,9 @@
 def solution(s):
     tmp = 0
     for i in list(s):
-        if i == '(':
+        if i == "(":
             tmp += 1
-        elif i == ')':
+        elif i == ")":
             tmp -= 1
         if tmp < 0:
             return False
