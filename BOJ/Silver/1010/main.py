@@ -12,6 +12,5 @@ for i in range(T):
 
 for i in range(T):
     print(
-        int(math.factorial(M[i]) /
-            (math.factorial(M[i] - N[i]) * math.factorial(N[i])))
+        int(math.factorial(M[i]) / (math.factorial(M[i] - N[i]) * math.factorial(N[i])))
     )

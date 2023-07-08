@@ -27,8 +27,7 @@ def gravity(tmppos, direction):
     v1, v2 = dirdict[direction]
     RedGoalIn = False
     while True:
-        if l[rx + v1][ry + v2] != "#" or l[bx +
-                                           v1][by + v2] != "#":  # 둘 중 하나가 이동 가능할 때
+        if l[rx + v1][ry + v2] != "#" or l[bx + v1][by + v2] != "#":  # 둘 중 하나가 이동 가능할 때
             if l[rx + v1][ry + v2] != "#" and not RedGoalIn:  # Red 이동
                 rx += v1
                 ry += v2
