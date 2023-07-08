@@ -14,7 +14,8 @@ diag2 = [0 for _ in range(6004)]
 
 for y in range(1, 3002):
     for x in range(1, 3002):
-        axis[x][y] = diag1[3002 + x - y] + axis[x][y - 1] + diag2[x + y] + light[x][y]
+        axis[x][y] = diag1[3002 + x - y] + \
+            axis[x][y - 1] + diag2[x + y] + light[x][y]
         diag1[3002 + x - y] += light[x][y]
         diag2[x + y] += light[x][y]
 

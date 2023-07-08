@@ -18,7 +18,8 @@ def match(
 ):
     for i in range(M):
         for j in range(M):
-            ni, nj = convert_func(rot, s1, s2, idx_i_1, idx_j_1, idx_i_2, idx_j_2, i, j)
+            ni, nj = convert_func(
+                rot, s1, s2, idx_i_1, idx_j_1, idx_i_2, idx_j_2, i, j)
             if (0 <= ni < N) and (0 <= nj < N):
                 if (idx_i_1 <= ni <= idx_i_2) and (idx_j_1 <= nj <= idx_j_2):
                     if key[i][j] == lock[ni][nj]:

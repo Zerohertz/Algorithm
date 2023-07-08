@@ -42,7 +42,8 @@ def goForward(robotNo, cnt):
             break
         if G[nx][ny][0] != 0:
             print(
-                "Robot " + str(robotNo + 1) + " crashes into robot " + str(G[nx][ny][0])
+                "Robot " + str(robotNo + 1) +
+                " crashes into robot " + str(G[nx][ny][0])
             )
             status = False
             break

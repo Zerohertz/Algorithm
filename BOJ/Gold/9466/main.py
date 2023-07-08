@@ -12,7 +12,7 @@ def DFS(pos):
     tmp.append(pos)
     if visit[l[pos]]:
         if l[pos] in tmp:
-            res += tmp[tmp.index(l[pos]) :]
+            res += tmp[tmp.index(l[pos]):]
         return
     else:
         DFS(l[pos])

@@ -6,8 +6,8 @@ s = sys.stdin.readline().rstrip()
 
 def swap(s, idx1, idx2):
     tmp = s[idx2]
-    s = s[:idx2] + s[idx1] + s[idx2 + 1 :]
-    s = s[:idx1] + tmp + s[idx1 + 1 :]
+    s = s[:idx2] + s[idx1] + s[idx2 + 1:]
+    s = s[:idx1] + tmp + s[idx1 + 1:]
     return s
 
 

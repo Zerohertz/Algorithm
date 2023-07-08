@@ -14,7 +14,7 @@ for i in range(2**N):
     tmpb = tmpbin[2:]
     binidx = [tmpb[j] for j in range(len(tmpb))]
     idx = ["0" for j in range(N)]
-    idx[N - len(binidx) :] = binidx
+    idx[N - len(binidx):] = binidx
     totW = 0
     totV = 0
     for j in range(N):

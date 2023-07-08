@@ -17,7 +17,8 @@ def DFS(i, j):
     if j == C - 1:
         return True
     for v in vec:
-        if 0 <= i + v < R and l[i + v][j + 1] == "." and not visit[i + v][j + 1]:
+        if 0 <= i + v < R and l[i + v][j +
+                                       1] == "." and not visit[i + v][j + 1]:
             visit[i + v][j + 1] = True
             if DFS(i + v, j + 1):
                 return True
