@@ -11,7 +11,6 @@ func main() {
 	tmp = 1
 	cnt = 1
 	for i := 1; i < 1001; i++ {
-		fmt.Println(i, tmp)
 		res[i] = res[i-1] + tmp
 		if tmp == cnt {
 			cnt = 1
