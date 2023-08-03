@@ -17,6 +17,6 @@ if __name__ == "__main__":
     cnt = 0
     DFS(d)
     for i in range(N):
-        if not i == -sys.maxsize and not i in Map:
+        if not Map[i] == -sys.maxsize and not i in Map:
             cnt += 1
     print(cnt)
