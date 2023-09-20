@@ -1,3 +1,6 @@
 [submodule "CodingTest"]
 	path = CodingTest
 	url = https://github.com/Zerohertz/CodingTest
+[submodule "LeetCode"]
+	path = LeetCode
+	url = https://github.com/Zerohertz/LeetCode
