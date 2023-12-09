@@ -1,4 +1,4 @@
-<div align=center> <h1> :technologist: Algorithm :technologist: </h1> </div>
+<div align=center> <h1> 🧑‍💻 Algorithm 🧑‍💻 </h1> </div>
 
 Solved problems in ...
 
