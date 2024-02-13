@@ -1,53 +1,69 @@
+import math
 import sys
 
 read = sys.stdin.readline
 
 
-def init(node, start, end):
-    if start == end:
-        tree[node] = l[start]
-        return tree[node]
-    else:
-        tree[node] = init(node * 2, start, (start + end) // 2) + init(
+class SegmentTree:
+    def __init__(self, values):
+        self.values = values
+        self.length = len(values)
+        size = math.ceil(math.log(self.length, 2) + 1e-9)
+        size = 1 << (size + 1)
+        self.tree = [0 for _ in range(size)]
+        self._init()
+
+    def _init(self, node=None, start=None, end=None):
+        if node is None and start is None and end is None:
+            node = 1
+            start = 0
+            end = self.length - 1
+        if start == end:
+            self.tree[node] = self.values[start]
+            return self.tree[node]
+        self.tree[node] = self._init(node * 2, start, (start + end) // 2) + self._init(
             node * 2 + 1, (start + end) // 2 + 1, end
         )
-        return tree[node]
+        return self.tree[node]
+
+    def update(self, idx, value, node=None, start=None, end=None):
+        if node is None and start is None and end is None:
+            diff = value - self.values[idx]
+            self.values[idx] = value
+            value = diff
+            node = 1
+            start = 0
+            end = self.length - 1
+        if idx < start or idx > end:
+            return None
+        self.tree[node] += value
+        if start != end:
+            self.update(idx, value, node * 2, start, (start + end) // 2)
+            self.update(idx, value, node * 2 + 1, (start + end) // 2 + 1, end)
+
+    def sum(self, left, right, node=None, start=None, end=None):
+        if node is None and start is None and end is None:
+            node = 1
+            start = 0
+            end = self.length - 1
+        if left > end or right < start:
+            return 0
+        if left <= start and end <= right:
+            return self.tree[node]
+        return self.sum(left, right, node * 2, start, (start + end) // 2) + self.sum(
+            left, right, node * 2 + 1, (start + end) // 2 + 1, end
+        )
 
 
-def segUpdate(node, start, end, idx, diff):
-    if idx < start or idx > end:
-        return
-    tree[node] += diff
-    if start != end:
-        segUpdate(node * 2, start, (start + end) // 2, idx, diff)
-        segUpdate(node * 2 + 1, (start + end) // 2 + 1, end, idx, diff)
-
-
-def segSum(node, start, end, left, right):
-    if left > end or right < start:
-        return 0
-    if left <= start and end <= right:
-        return tree[node]
-    return segSum(node * 2, start, (start + end) // 2, left, right) + segSum(
-        node * 2 + 1, (start + end) // 2 + 1, end, left, right
-    )
-
-
-N, M, K = map(int, read().split())
-
-l = [0 for _ in range(N)]
-for i in range(N):
-    l[i] = int(read())
-
-tree = [0 for _ in range(4_000_000)]
-init(1, 0, N - 1)
-
-for _ in range(M + K):
-    a, b, c = map(int, read().split())
-    if a == 1:
-        b -= 1
-        diff = c - l[b]
-        l[b] = c
-        segUpdate(1, 0, N - 1, b, diff)
-    elif a == 2:
-        print(segSum(1, 0, N - 1, b - 1, c - 1))
+if __name__ == "__main__":
+    N, M, K = map(int, read().split())
+    l = [0 for _ in range(N)]
+    for i in range(N):
+        l[i] = int(read())
+    st = SegmentTree(l)
+    for _ in range(M + K):
+        a, b, c = map(int, read().split())
+        if a == 1:
+            st.update(b - 1, c)
+        elif a == 2:
+            print(st.sum(b - 1, c - 1))
