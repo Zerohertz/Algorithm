@@ -2,6 +2,7 @@ import heapq
 import sys
 
 read = sys.stdin.readline
+sys.setrecursionlimit(10**9)
 
 
 class DistjointSet:
@@ -36,12 +37,12 @@ if __name__ == "__main__":
     print(results)
 
 
-"""3rd (Kruskal)
+"""2nd (Kruskal)
 import heapq
 import sys
 
 read = sys.stdin.readline
-
+sys.setrecursionlimit(10**9)
 
 class DistjointSet:
     def __init__(self, size):
@@ -75,7 +76,7 @@ if __name__ == "__main__":
     print(results)
 """
 
-"""2nd (Prim)
+"""1st (Prim)
 import heapq
 import sys
 
@@ -103,38 +104,4 @@ if __name__ == "__main__":
             if not visited[to_]:
                 heapq.heappush(paths, (weights, to_))
     print(results)
-"""
-
-
-"""1st (Prim)
-import heapq
-import sys
-
-read = sys.stdin.readline
-
-V, E = map(int, read().split())
-G = [[] for _ in range(V + 1)]
-
-for _ in range(E):
-    a, b, c = map(int, read().split())
-    G[b].append([c, a])
-    G[a].append([c, b])
-
-l = [[0, 1]]
-visit = [False for _ in range(V + 1)]
-cnt = 0
-cost = 0
-
-while l:
-    if cnt == V:
-        break
-    c, a = heapq.heappop(l)
-    if not visit[a]:
-        visit[a] = True
-        cost += c
-        cnt += 1
-        for i in G[a]:
-            heapq.heappush(l, i)
-
-print(cost)
 """
