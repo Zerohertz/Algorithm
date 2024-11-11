@@ -12,6 +12,8 @@ def main():
     queue = [(0, K - 1)]
     while queue:
         w, v = heapq.heappop(queue)
+        if weights[v] < w:
+            continue
         for _w, _v in graph[v]:
             if weights[_v] <= w + _w:
                 continue
