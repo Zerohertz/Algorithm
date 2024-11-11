@@ -28,7 +28,6 @@ if __name__ == "__main__":
         heapq.heappush(maps, (C, A - 1, B - 1))
     results = 0
     distjointset = DistjointSet(V)
-    cnt = 1
     while maps:
         cost, node1, node2 = heapq.heappop(maps)
         if distjointset.find(node1) != distjointset.find(node2):
@@ -67,7 +66,6 @@ if __name__ == "__main__":
         heapq.heappush(maps, (C, A - 1, B - 1))
     results = 0
     distjointset = DistjointSet(V)
-    cnt = 1
     while maps:
         cost, node1, node2 = heapq.heappop(maps)
         if distjointset.find(node1) != distjointset.find(node2):
