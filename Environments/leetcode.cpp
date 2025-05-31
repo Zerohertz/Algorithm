@@ -3,13 +3,9 @@ using namespace std;
 
 class Solution {
 public:
-  bool isPalindrome(int x) {
-    string y = to_string(x);
-    size_t n = y.size();
-    for (int i = 0; i < n / 2; i++) {
-      if (y[i] != y[n - i - 1]) {
-        return false;
-      }
+  bool solution(int x) {
+    if (x) {
+      return false;
     }
     return true;
   }
@@ -17,7 +13,7 @@ public:
 
 int main(int argc, char *argv[]) {
   Solution *solution = new Solution();
-  bool result = solution->isPalindrome(121);
+  bool result = solution->solution(0);
   cout << result;
   return 0;
 }
