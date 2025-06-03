@@ -1,8 +1,12 @@
 SHELL := /bin/bash
 
+.PHONY: c-lc
+c-lc:
+	clang leetcode.c -std=c23 -o leetcode && ./leetcode && rm leetcode
+
 .PHONY: cpp-lc
 cpp-lc:
-	g++ leetcode.cpp -std=c++23 -o leetcode && ./leetcode && rm leetcode
+	clang++ leetcode.cpp -std=c++23 -o leetcode && ./leetcode && rm leetcode
 
 .PHONY: cpp-boj
 cpp-boj:
