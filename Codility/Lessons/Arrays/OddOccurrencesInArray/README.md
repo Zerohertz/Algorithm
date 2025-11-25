@@ -1,0 +1,2 @@
+- [Problem](https://app.codility.com/programmers/lessons/2-arrays/odd_occurrences_in_array/)
+- [Solution](https://app.codility.com/demo/results/training5XP3V6-DUZ/)
