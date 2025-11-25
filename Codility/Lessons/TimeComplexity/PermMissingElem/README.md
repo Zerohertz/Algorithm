@@ -1,0 +1,2 @@
+- [Problem](https://app.codility.com/programmers/lessons/3-time_complexity/perm_missing_elem/)
+- [Solution](https://app.codility.com/demo/results/trainingTGU93B-RCV/)
