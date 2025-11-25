@@ -1,0 +1,2 @@
+- [Problem](https://app.codility.com/programmers/lessons/3-time_complexity/tape_equilibrium/)
+- [Solution](https://app.codility.com/demo/results/trainingAPG48J-XRQ/)
