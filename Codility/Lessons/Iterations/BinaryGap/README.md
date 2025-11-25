@@ -1,0 +1,2 @@
+- [Problem](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/)
+- [Solution](https://app.codility.com/demo/results/trainingDZ5BXN-QJG/)
