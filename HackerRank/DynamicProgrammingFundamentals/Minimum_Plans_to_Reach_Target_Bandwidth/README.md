@@ -1,0 +1,1 @@
+- [Problem](https://www.hackerrank.com/contests/software-engineer-prep-kit/challenges/minimum-plans-to-reach-target-bandwidth/problem)
